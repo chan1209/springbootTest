@@ -41,7 +41,11 @@ public class UserController {
     }
     
     @RequestMapping("/add")
-    public void save(@RequestParam(value = "name")String name,@RequestParam(value = "sex")String sex,@RequestParam(value = "password")String password) {
+    public void save(
+            @RequestParam(value = "name")String name,
+            @RequestParam(value = "sex")String sex,
+            @RequestParam(value = "password")String password
+    ) {
         UserDao user = new UserDao();
         user.setUserName(name);
         user.setPassWord(password);
